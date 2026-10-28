@@ -1,0 +1,14 @@
+.cover {
+  flex: none;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  background: var(--surface-3);
+  border: 1px solid var(--border);
+}
+.placeholder {
+  display: inline-grid;
+  place-items: center;
+  color: var(--accent);
+  background:
+    linear-gradient(135deg, rgba(117, 169, 232, 0.22), rgba(217, 148, 74, 0.16)), var(--surface-2);
+}

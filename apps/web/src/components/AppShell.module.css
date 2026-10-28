@@ -1,0 +1,23 @@
+.main {
+  max-width: 1240px;
+  margin: 0 auto;
+  /* Reserva a altura do player fixo para ele nunca cobrir conteudo. */
+  padding: 28px 24px calc(var(--player-height) + 40px);
+}
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 28px;
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 720px) {
+  .main {
+    padding: 18px 14px calc(var(--player-height) + 32px);
+  }
+}

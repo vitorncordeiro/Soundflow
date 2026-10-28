@@ -1,0 +1,60 @@
+.region {
+  position: fixed;
+  left: 50%;
+  bottom: calc(var(--player-height) + 16px);
+  transform: translateX(-50%);
+  z-index: 40;
+  width: min(92vw, 460px);
+  pointer-events: none;
+}
+.toast {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px 10px 14px;
+  border-radius: var(--radius-md);
+  background: var(--surface-3);
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow-soft);
+  font-size: 14px;
+  animation: rise 0.18s ease-out;
+}
+.toast span {
+  flex: 1;
+}
+.success {
+  border-color: rgba(127, 209, 160, 0.5);
+}
+.success svg {
+  color: var(--success);
+}
+.error {
+  border-color: rgba(240, 138, 138, 0.55);
+}
+.error svg {
+  color: var(--danger);
+}
+.info svg {
+  color: var(--accent);
+}
+.close {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-muted);
+}
+.close:hover {
+  background: rgba(160, 180, 210, 0.15);
+  color: var(--text);
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}

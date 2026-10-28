@@ -1,0 +1,55 @@
+.panel {
+  position: sticky;
+  top: calc(var(--topbar-height) + 20px);
+  align-self: start;
+  max-height: calc(100vh - var(--topbar-height) - var(--player-height) - 40px);
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: rgba(11, 16, 24, 0.82);
+  overflow: hidden;
+}
+.tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+}
+.tab {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 12px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+.tab:hover {
+  color: var(--text);
+}
+.active {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}
+.count {
+  min-width: 22px;
+  padding: 0 7px;
+  border-radius: 999px;
+  background: var(--surface-3);
+  font-size: 12px;
+  line-height: 20px;
+}
+.body {
+  padding: 10px 10px 14px;
+  overflow-y: auto;
+}
+
+@media (max-width: 960px) {
+  .panel {
+    position: static;
+    max-height: none;
+  }
+}

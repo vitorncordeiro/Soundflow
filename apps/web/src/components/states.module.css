@@ -1,0 +1,56 @@
+.state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 36px 20px;
+  text-align: center;
+}
+.icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: var(--accent);
+  background: rgba(117, 169, 232, 0.1);
+  border: 1px solid var(--border);
+  margin-bottom: 6px;
+}
+.danger {
+  color: var(--danger);
+  background: rgba(240, 138, 138, 0.1);
+}
+.title {
+  margin: 0;
+  font-weight: 600;
+}
+.description {
+  margin: 0;
+  max-width: 34ch;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+.button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface-2);
+}
+.button:hover {
+  border-color: var(--accent);
+}
+.spinner {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
+  animation: spin 0.9s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
